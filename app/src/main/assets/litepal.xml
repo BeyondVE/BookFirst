@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <litepal>
-    <dbname value = "LitepalBookStore"></dbname>
+    <!--<dbname value = "LitepalBookStore"></dbname>-->
 
-    <version value = "2"></version>
+    <!--<version value = "2"></version>-->
+    <!--<list>-->
+        <!--<mapping class = "helloworld.lin.com.databasetest.ZhangSix.Book"></mapping>-->
+        <!--<mapping class = "helloworld.lin.com.databasetest.ZhangSix.Category"></mapping>-->
+    <!--</list>-->
+    <!--十四章-->
+    <dbname value = "cool_weather"></dbname>
+
+    <version value = "1"></version>
     <list>
-        <mapping class = "helloworld.lin.com.databasetest.ZhangSix.Book"></mapping>
-        <mapping class = "helloworld.lin.com.databasetest.ZhangSix.Category"></mapping>
+        <mapping class = "helloworld.lin.com.databasetest.ZhangFourteen.db.Province"></mapping>
+        <mapping class = "helloworld.lin.com.databasetest.ZhangFourteen.db.City"></mapping>
+        <mapping class = "helloworld.lin.com.databasetest.ZhangFourteen.db.County"></mapping>
+
     </list>
 </litepal>
