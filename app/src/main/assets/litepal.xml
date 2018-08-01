@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value = "LitepalBookStore"></dbname>
+
+    <version value = "2"></version>
+    <list>
+        <mapping class = "helloworld.lin.com.databasetest.ZhangSix.Book"></mapping>
+        <mapping class = "helloworld.lin.com.databasetest.ZhangSix.Category"></mapping>
+    </list>
+</litepal>

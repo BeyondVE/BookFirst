@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="helloworld.lin.com.databasetest">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 百度地图项目权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="PmGfVoEHvfrj6YZQAf5NkPVElwqwqF6Y" />
+        <!-- <service -->
+        <!-- android:name="com.baidu.location.f" -->
+        <!-- android:enabled="true" -->
+        <!-- android:process="remote"> -->
+        <!-- </service> -->
+        <activity android:name=".ZhangSix.Main2Activity" />
+        <activity android:name=".ZhangSix.MainActivity" />
+        <activity android:name=".ZhangSix.Main3FileSaveActivity" />
+        <activity android:name=".ZhangSix.Main4SharedPreferencesActivity" />
+        <activity android:name=".ZhangSix.BestPractice" />
+        <activity android:name=".ZhangTwo.FirstActivity" />
+        <activity android:name=".ZhangThree.ListViewActivity" />
+        <activity android:name=".ZhangThree.RecyclerViewActivity" />
+        <activity android:name=".ZhangSeven.ContactsTestActivity" />
+        <activity android:name=".ZhangEight.NotificationTestActivity" />
+        <activity android:name=".ZhangNine.HttpURLConnectionActivity" />
+        <activity android:name=".ZhangNine.OkHttp" />
+        <activity android:name=".ZhangEleven.BaiduTestActivity" />
+
+        <!-- <service -->
+        <!-- android:name=".ZhangEleven.MyService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:process="remote" -->
+        <!-- &gt;</service> -->
+        <activity android:name=".ZhangEleven.BaiduMapActivity">
+
+        </activity>
+        <activity android:name=".ZhangTwelve.MaterialActivity"
+            android:label="Fruits">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

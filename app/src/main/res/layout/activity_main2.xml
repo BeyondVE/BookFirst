@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="helloworld.lin.com.databasetest.ZhangSix.Main2Activity">
+    <Button
+
+        android:text="litepal创建数据库"
+        android:id="@+id/button_litepal_create"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <Button
+        android:text="litepal添加"
+        android:id="@+id/button_litepal_add"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/button_litepal_create"
+        android:layout_marginTop="5dp"
+        android:layout_height="60dp" />
+    <Button
+        android:text="litepal更新"
+        android:id="@+id/button_litepal_update"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button_litepal_add"
+        />
+    <Button
+        android:text="litepal删除"
+        android:id="@+id/button_litepal_delete"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button_litepal_update"
+        />
+    <Button
+        android:text="litepal查询"
+        android:id="@+id/button_litepal_query"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button_litepal_delete"
+        />
+</RelativeLayout>
