@@ -1,6 +1,7 @@
 package helloworld.lin.com.databasetest.ZhangFourteen;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import org.litepal.LitePal;
 import org.litepal.crud.DataSupport;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +28,7 @@ import helloworld.lin.com.databasetest.R;
 import helloworld.lin.com.databasetest.ZhangFourteen.db.City;
 import helloworld.lin.com.databasetest.ZhangFourteen.db.County;
 import helloworld.lin.com.databasetest.ZhangFourteen.db.Province;
+import helloworld.lin.com.databasetest.ZhangFourteen.gson.Weather;
 import helloworld.lin.com.databasetest.ZhangFourteen.util.HttpUtil;
 import helloworld.lin.com.databasetest.ZhangFourteen.util.Utility;
 import okhttp3.Call;
@@ -74,6 +77,13 @@ public class ChooseAreaFragment extends Fragment {
                 }else if(currentLevel == LEVEL_CITY){
                     selectedCity = cityList.get(position);
                     queryCounties();
+                }else if (currentLevel == LEVEL_COUNTY){
+                    String weatherId = countyList.get(position).getWeatherId();
+                    Intent intent = new Intent(getActivity(), WeatherActivity.class);
+                    Log.d("到这里了999", "onResponse: ");
+                    intent.putExtra("weather_id",weatherId);
+                    startActivity(intent);
+                    getActivity().finish();
                 }
             }
         });
@@ -137,7 +147,7 @@ public class ChooseAreaFragment extends Fragment {
     private void queryCounties(){
         titleText.setText(selectedCity.getCityName());
         backButton.setVisibility(View.VISIBLE);
-        countyList = LitePal.where("cityid = ?",String.valueOf(selectedCity.getId())).find(County.class);
+        countyList = LitePal.where("cityId = ?",String.valueOf(selectedCity.getId())).find(County.class);
 //        countyList = DataSupport.where("cityid = ?",String.valueOf(selectedCity.getId())).find(County.class);
         if(countyList.size() > 0){
             dataList.clear();

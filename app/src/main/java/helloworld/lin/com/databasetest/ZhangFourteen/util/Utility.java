@@ -2,6 +2,8 @@ package helloworld.lin.com.databasetest.ZhangFourteen.util;
 
 import android.text.TextUtils;
 
+import com.google.gson.Gson;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,6 +11,7 @@ import org.json.JSONObject;
 import helloworld.lin.com.databasetest.ZhangFourteen.db.City;
 import helloworld.lin.com.databasetest.ZhangFourteen.db.County;
 import helloworld.lin.com.databasetest.ZhangFourteen.db.Province;
+import helloworld.lin.com.databasetest.ZhangFourteen.gson.Weather;
 
 /**
  * Created by W50V on 2018/8/2.
@@ -73,5 +76,16 @@ public class Utility {
             }
         }
         return false;
+    }
+    public static Weather handleWeatherResponse(String response){
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent,Weather.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    return null;
     }
 }
